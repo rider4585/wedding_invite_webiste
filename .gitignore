@@ -1,0 +1,18 @@
+# Runtime & workspace internals
+hive/
+palace/
+palace.lock
+palace.rebuilt-056
+roster.json
+roster-backups/
+hallways.json
+.idea/
+.DS_Store
+
+# Uncompressed source files & non-web reference PDFs
+invitation card pdf/
+Swapna Chalun Aale*
+images/*
+!images/seal.jpg
+!images/web/
+!images/low/
