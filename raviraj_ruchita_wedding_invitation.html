@@ -101,11 +101,16 @@ body[data-lang="mr"] .cap b {
 }
 
 body[data-lang="mr"] h3,
-body[data-lang="mr"] .ganesh,
-body[data-lang="mr"] .cap small,
 body[data-lang="mr"] .cap .cap-fam {
   font-family: "Vesper Libre", "Karma", Georgia, serif;
   font-weight: 500;
+  letter-spacing: 0;
+}
+
+body[data-lang="mr"] .ganesh,
+body[data-lang="mr"] .cap small {
+  font-family: "Karma", Georgia, serif;
+  font-weight: 700;
   letter-spacing: 0;
 }
 
@@ -567,6 +572,30 @@ ul.l li:last-child {
 .hero-card h3,
 .hero-card p {
   text-shadow: 0 1px 10px rgba(255, 252, 247, 0.85);
+}
+
+.hero-card .ganesh {
+  color: var(--wine-deep);
+  font-size: 1.12rem;
+  font-weight: 700;
+  text-shadow: 0 1px 10px rgba(255, 252, 247, 0.92);
+}
+
+.hero-card .div {
+  background: linear-gradient(
+    90deg,
+    transparent 0%,
+    rgba(139, 52, 72, 0.45) 38%,
+    transparent 43%,
+    transparent 57%,
+    rgba(139, 52, 72, 0.45) 62%,
+    transparent 100%
+  );
+}
+
+.hero-card .div::after {
+  background: transparent;
+  color: var(--wine);
 }
 
 .hero-card h1 {
@@ -1044,8 +1073,9 @@ body.opened #page {
 
 .cap small {
   display: block;
-  font-size: 0.95rem;
-  font-weight: 600;
+  font-size: 0.98rem;
+  font-weight: 700;
+  color: var(--wine-deep);
   letter-spacing: 0.04em;
   margin-bottom: 4px;
 }
