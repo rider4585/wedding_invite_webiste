@@ -67,7 +67,9 @@ body[data-side="groom"] .hero .fam {
 }
 
 body[data-side="groom"] #familyCards [data-party="bride"],
-body[data-side="bride"] #familyCards [data-party="groom"] {
+body[data-side="bride"] #familyCards [data-party="groom"],
+body[data-side="groom"] #contactRow [data-party="bride"],
+body[data-side="bride"] #contactRow [data-party="groom"] {
   display: none;
 }
 
@@ -411,6 +413,16 @@ p {
   transform: translateY(-2px);
   background: #fffdf9;
   box-shadow: 0 10px 24px rgba(194, 145, 82, 0.24);
+}
+
+.btn.btn-static {
+  cursor: default;
+}
+
+.btn.btn-static:hover {
+  transform: none;
+  background: rgba(255, 252, 247, 0.9);
+  box-shadow: 0 6px 18px rgba(139, 52, 72, 0.06);
 }
 
 .btn.fill {
@@ -1796,17 +1808,21 @@ body.opened #page {
       <h2 class="en" id="hostEn" style="margin-top:12px">The Bugge Family &amp; Loved Ones</h2>
 
       <div class="div"></div>
-      <p class="mute mr">संपर्क</p>
-      <p class="mute en">Contact</p>
+      <p class="mute mr">निमंत्रक</p>
+      <p class="mute en">Nimantrak</p>
       <div class="btn-row" id="contactRow">
         <a class="btn" data-party="groom" href="tel:+917756048934">
-          <span class="mr">श्री. जीतेंद्र व महेंद्र नरसिंगराव बुग्गे · ७७५६०४८९३४</span>
-          <span class="en">Shri Jitendra &amp; Mahendra Narsingrao Bugge · 7756048934</span>
+          <span class="mr">श्री. जीतेंद्र नरसिंगराव बुग्गे · ७७५६०४८९३४</span>
+          <span class="en">Shri Jitendra Narsingrao Bugge · 7756048934</span>
         </a>
         <a class="btn" data-party="groom" href="tel:+918805509191">
-          <span class="mr">श्री. बालाजी गोरोबा मेळे · ८८०५५०९१९१</span>
-          <span class="en">Shri Balaji Goroba Mele · 8805509191</span>
+          <span class="mr">श्री. महेंद्र नरसिंगराव बुग्गे · ८८०५५०९१९१</span>
+          <span class="en">Shri Mahendra Narsingrao Bugge · 8805509191</span>
         </a>
+        <div class="btn btn-static" data-party="groom">
+          <span class="mr">श्री. बालाजी गोरोबा मेळे</span>
+          <span class="en">Shri Balaji Goroba Mele</span>
+        </div>
         <a class="btn" data-party="bride" href="tel:+919923194942">
           <span class="mr">श्री. राजेंद्र दादासाहेब काकडे · ९९२३१९४९४२</span>
           <span class="en">Shri Rajendra Dadasaheb Kakade · 9923194942</span>
