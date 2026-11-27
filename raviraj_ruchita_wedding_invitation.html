@@ -1477,7 +1477,9 @@ body.opened #page {
 
 @media (prefers-reduced-motion: reduce) {
   #petals { display: none; }
-  .seal, .ganesh, .amp, .hint, .tap-hand, .tap-ring { animation: none !important; }
+  .seal, .ganesh, .amp, .hint, .tap-hand, .tap-ring,
+  .hero .hero-card > *, .hero .hero-card > h1 { animation: none !important; }
+  .hero .hero-card > * { opacity: 1 !important; transform: none !important; }
   .tap-ring { display: none; }
   .rv { opacity: 1; transform: none; transition: none; }
 }
