@@ -651,27 +651,27 @@ ul.l li:last-child {
 /* Staggered Hero Entrance on Envelope Open */
 .hero .hero-card > * {
   opacity: 0;
-  animation: up 0.95s cubic-bezier(0.22, 1, 0.36, 1) both paused;
+  animation: up 0.55s cubic-bezier(0.22, 1, 0.36, 1) both paused;
 }
 
-.hero .hero-card > *:nth-child(1) { animation-delay: 0.05s; }
-.hero .hero-card > *:nth-child(2) { animation-delay: 0.16s; }
-.hero .hero-card > *:nth-child(3) { animation-delay: 0.26s; }
-.hero .hero-card > *:nth-child(4) { animation-delay: 0.36s; }
-.hero .hero-card > *:nth-child(5) { animation-delay: 0.46s; }
-.hero .hero-card > *:nth-child(6) { animation-delay: 0.56s; }
-.hero .hero-card > *:nth-child(7) { animation-delay: 0.66s; }
-.hero .hero-card > *:nth-child(8) { animation-delay: 0.76s; }
-.hero .hero-card > *:nth-child(9) { animation-delay: 0.86s; }
-.hero .hero-card > *:nth-child(10) { animation-delay: 0.96s; }
-.hero .hero-card > *:nth-child(11) { animation-delay: 1.06s; }
+.hero .hero-card > *:nth-child(1) { animation-delay: 0.02s; }
+.hero .hero-card > *:nth-child(2) { animation-delay: 0.08s; }
+.hero .hero-card > *:nth-child(3) { animation-delay: 0.14s; }
+.hero .hero-card > *:nth-child(4) { animation-delay: 0.20s; }
+.hero .hero-card > *:nth-child(5) { animation-delay: 0.26s; }
+.hero .hero-card > *:nth-child(6) { animation-delay: 0.32s; }
+.hero .hero-card > *:nth-child(7) { animation-delay: 0.38s; }
+.hero .hero-card > *:nth-child(8) { animation-delay: 0.44s; }
+.hero .hero-card > *:nth-child(9) { animation-delay: 0.50s; }
+.hero .hero-card > *:nth-child(10) { animation-delay: 0.54s; }
+.hero .hero-card > *:nth-child(11) { animation-delay: 0.58s; }
 
 body.live .hero .hero-card > * {
   animation-play-state: running;
 }
 
 .hero .hero-card > h1 {
-  animation: up 0.95s cubic-bezier(0.22, 1, 0.36, 1) 0.46s both paused, sh 6s linear infinite;
+  animation: up 0.55s cubic-bezier(0.22, 1, 0.36, 1) 0.26s both paused, sh 6s linear infinite;
 }
 
 body.live .hero .hero-card > h1 {
@@ -962,7 +962,7 @@ body.live .hero .hero-card > h1 {
   inset: 0;
   z-index: 48;
   background: radial-gradient(ellipse at 50% 35%, #fffdf9 0%, #f5e7d4 58%, #e9d1b5 100%);
-  transition: opacity 1.05s ease;
+  transition: opacity 0.65s ease;
 }
 
 #page {
@@ -970,7 +970,7 @@ body.live .hero .hero-card > h1 {
   z-index: 49;
   opacity: 0;
   transform: translateY(34vh);
-  transition: transform 2.1s cubic-bezier(0.22, 1, 0.36, 1), opacity 1.15s ease 0.2s;
+  transition: transform 0.95s cubic-bezier(0.22, 1, 0.36, 1), opacity 0.6s ease;
 }
 
 body.opened #page {
@@ -1905,7 +1905,7 @@ body.opened #page {
       setTimeout(() => {
         body.classList.add("live");
         if (lining) lining.style.opacity = "0";
-      }, 1850);
+      }, 1250);
 
       setTimeout(() => {
         if (page) page.classList.add("done");
@@ -1913,7 +1913,7 @@ body.opened #page {
         if (lining) lining.remove();
         body.style.overflow = "";
         window.scrollTo(0, 0);
-      }, 3350);
+      }, 3250);
     } else {
       body.classList.add("opened", "live");
       if (page) page.classList.add("done");
