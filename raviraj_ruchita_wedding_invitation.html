@@ -651,27 +651,27 @@ ul.l li:last-child {
 /* Staggered Hero Entrance on Envelope Open */
 .hero .hero-card > * {
   opacity: 0;
-  animation: up 0.55s cubic-bezier(0.22, 1, 0.36, 1) both paused;
+  animation: up 0.45s cubic-bezier(0.22, 1, 0.36, 1) both paused;
 }
 
 .hero .hero-card > *:nth-child(1) { animation-delay: 0.02s; }
-.hero .hero-card > *:nth-child(2) { animation-delay: 0.08s; }
-.hero .hero-card > *:nth-child(3) { animation-delay: 0.14s; }
-.hero .hero-card > *:nth-child(4) { animation-delay: 0.20s; }
-.hero .hero-card > *:nth-child(5) { animation-delay: 0.26s; }
-.hero .hero-card > *:nth-child(6) { animation-delay: 0.32s; }
-.hero .hero-card > *:nth-child(7) { animation-delay: 0.38s; }
-.hero .hero-card > *:nth-child(8) { animation-delay: 0.44s; }
-.hero .hero-card > *:nth-child(9) { animation-delay: 0.50s; }
-.hero .hero-card > *:nth-child(10) { animation-delay: 0.54s; }
-.hero .hero-card > *:nth-child(11) { animation-delay: 0.58s; }
+.hero .hero-card > *:nth-child(2) { animation-delay: 0.05s; }
+.hero .hero-card > *:nth-child(3) { animation-delay: 0.08s; }
+.hero .hero-card > *:nth-child(4) { animation-delay: 0.11s; }
+.hero .hero-card > *:nth-child(5) { animation-delay: 0.14s; }
+.hero .hero-card > *:nth-child(6) { animation-delay: 0.17s; }
+.hero .hero-card > *:nth-child(7) { animation-delay: 0.20s; }
+.hero .hero-card > *:nth-child(8) { animation-delay: 0.23s; }
+.hero .hero-card > *:nth-child(9) { animation-delay: 0.26s; }
+.hero .hero-card > *:nth-child(10) { animation-delay: 0.29s; }
+.hero .hero-card > *:nth-child(11) { animation-delay: 0.32s; }
 
 body.live .hero .hero-card > * {
   animation-play-state: running;
 }
 
 .hero .hero-card > h1 {
-  animation: up 0.55s cubic-bezier(0.22, 1, 0.36, 1) 0.26s both paused, sh 6s linear infinite;
+  animation: up 0.45s cubic-bezier(0.22, 1, 0.36, 1) 0.14s both paused, sh 6s linear infinite;
 }
 
 body.live .hero .hero-card > h1 {
@@ -962,7 +962,7 @@ body.live .hero .hero-card > h1 {
   inset: 0;
   z-index: 48;
   background: radial-gradient(ellipse at 50% 35%, #fffdf9 0%, #f5e7d4 58%, #e9d1b5 100%);
-  transition: opacity 0.65s ease;
+  transition: opacity 0.45s ease;
 }
 
 #page {
@@ -970,7 +970,7 @@ body.live .hero .hero-card > h1 {
   z-index: 49;
   opacity: 0;
   transform: translateY(34vh);
-  transition: transform 0.95s cubic-bezier(0.22, 1, 0.36, 1), opacity 0.6s ease;
+  transition: transform 0.5s cubic-bezier(0.22, 1, 0.36, 1), opacity 0.45s ease;
 }
 
 body.opened #page {
@@ -1012,7 +1012,7 @@ body.opened #page {
 .pb { z-index: 2; }
 
 .pl, .pr, .pb {
-  transition: transform 1.15s cubic-bezier(0.22, 1, 0.36, 1);
+  transition: transform 0.75s cubic-bezier(0.22, 1, 0.36, 1);
 }
 
 .pl i {
@@ -1034,7 +1034,7 @@ body.opened #page {
   z-index: 3;
   inset: 0;
   transform-origin: 50% 0;
-  transition: transform 1.2s cubic-bezier(0.4, 0, 0.2, 1) 0.08s;
+  transition: transform 0.95s cubic-bezier(0.4, 0, 0.2, 1) 0.05s;
   pointer-events: none;
   filter: drop-shadow(0 6px 18px rgba(139, 98, 56, 0.24));
 }
@@ -1891,7 +1891,7 @@ body.opened #page {
     opened = true;
 
     if (bgMusic && bgMusic.paused && !userPausedMusic) {
-      playMusicWithFade(1600);
+      playMusicWithFade(1200);
     }
 
     if (splash) {
@@ -1900,12 +1900,12 @@ body.opened #page {
       setTimeout(() => {
         splash.classList.add("o2");
         body.classList.add("opened");
-      }, 700);
+      }, 500);
 
       setTimeout(() => {
         body.classList.add("live");
         if (lining) lining.style.opacity = "0";
-      }, 1000);
+      }, 750);
 
       setTimeout(() => {
         if (page) page.classList.add("done");
@@ -1913,7 +1913,7 @@ body.opened #page {
         if (lining) lining.remove();
         body.style.overflow = "";
         window.scrollTo(0, 0);
-      }, 1950);
+      }, 1250);
     } else {
       body.classList.add("opened", "live");
       if (page) page.classList.add("done");
