@@ -1012,7 +1012,7 @@ body.opened #page {
 .pb { z-index: 2; }
 
 .pl, .pr, .pb {
-  transition: transform 2.1s cubic-bezier(0.22, 1, 0.36, 1);
+  transition: transform 1.15s cubic-bezier(0.22, 1, 0.36, 1);
 }
 
 .pl i {
@@ -1034,7 +1034,7 @@ body.opened #page {
   z-index: 3;
   inset: 0;
   transform-origin: 50% 0;
-  transition: transform 1.65s cubic-bezier(0.35, 0, 0.2, 1) 0.15s;
+  transition: transform 1.2s cubic-bezier(0.4, 0, 0.2, 1) 0.08s;
   pointer-events: none;
   filter: drop-shadow(0 6px 18px rgba(139, 98, 56, 0.24));
 }
@@ -1891,7 +1891,7 @@ body.opened #page {
     opened = true;
 
     if (bgMusic && bgMusic.paused && !userPausedMusic) {
-      playMusicWithFade(2200);
+      playMusicWithFade(1600);
     }
 
     if (splash) {
@@ -1900,12 +1900,12 @@ body.opened #page {
       setTimeout(() => {
         splash.classList.add("o2");
         body.classList.add("opened");
-      }, 1050);
+      }, 700);
 
       setTimeout(() => {
         body.classList.add("live");
         if (lining) lining.style.opacity = "0";
-      }, 1250);
+      }, 1000);
 
       setTimeout(() => {
         if (page) page.classList.add("done");
@@ -1913,7 +1913,7 @@ body.opened #page {
         if (lining) lining.remove();
         body.style.overflow = "";
         window.scrollTo(0, 0);
-      }, 3250);
+      }, 1950);
     } else {
       body.classList.add("opened", "live");
       if (page) page.classList.add("done");
