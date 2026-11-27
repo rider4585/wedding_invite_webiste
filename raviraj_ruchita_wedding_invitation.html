@@ -700,7 +700,7 @@ body.live .hero .hero-card > h1 {
   );
 }
 
-/* Rich Warm-Plum Vignette for Photo-Backed Card Sections (Zero White Fog) */
+/* Warm Photo Vignette + Frosted Ivory Highlight Pills for Standalone Headings & Text */
 .px.closing::after,
 .px.veil::after {
   content: "";
@@ -710,28 +710,61 @@ body.live .hero .hero-card > h1 {
   background: linear-gradient(
     180deg,
     var(--bg) 0%,
-    rgba(38, 16, 22, 0.42) 14%,
-    rgba(38, 16, 22, 0.48) 86%,
+    rgba(38, 16, 22, 0.22) 12%,
+    rgba(38, 16, 22, 0.28) 88%,
     var(--bg) 100%
   );
 }
 
 .px.closing .pxin > h2,
 .px.veil .pxin > h2 {
-  color: #fffaf3;
-  text-shadow: 0 2px 16px rgba(20, 6, 10, 0.72);
+  width: fit-content;
+  max-width: 100%;
+  margin: 0 auto 12px;
+  padding: 8px 24px;
+  border-radius: 99px;
+  background: rgba(255, 252, 247, 0.92);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  border: 1px solid rgba(194, 145, 82, 0.4);
+  box-shadow: 0 8px 22px rgba(38, 16, 22, 0.14);
+  color: var(--wine);
+  text-shadow: none;
 }
 
 .px.closing .pxin > p,
 .px.veil .pxin > p {
-  color: #fdf6ec !important;
-  text-shadow: 0 2px 14px rgba(20, 6, 10, 0.75);
+  width: fit-content;
+  max-width: 100%;
+  margin: 12px auto;
+  padding: 12px 20px;
+  border-radius: 16px;
+  background: rgba(255, 252, 247, 0.92);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  border: 1px solid rgba(194, 145, 82, 0.36);
+  box-shadow: 0 8px 22px rgba(38, 16, 22, 0.14);
+  color: #541625 !important;
+  font-weight: 600;
+  text-shadow: none;
+}
+
+#blessMr,
+#blessEn {
+  background: linear-gradient(180deg, rgba(255, 253, 249, 0.96), rgba(248, 235, 215, 0.94));
+  border: 1.5px solid rgba(194, 145, 82, 0.58);
+  padding: 10px 22px;
+  border-radius: 99px;
+  font-size: 1.04rem;
+  font-weight: 700;
+  color: #541625 !important;
+  box-shadow: 0 10px 26px rgba(38, 16, 22, 0.16);
 }
 
 .px.closing .pxin > .ganesh,
 .px.veil .pxin > .ganesh {
   color: var(--gold-soft);
-  text-shadow: 0 2px 12px rgba(20, 6, 10, 0.65);
+  text-shadow: 0 2px 12px rgba(20, 6, 10, 0.7);
 }
 
 .px.closing .pxin > .div,
