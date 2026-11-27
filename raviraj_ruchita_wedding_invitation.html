@@ -1932,8 +1932,13 @@ body.opened #page {
       pairEn: "Raviraj & Ruchita",
       pairSymbol: "Raviraj ♥ Ruchita",
       icsFile: "Raviraj-Ruchita-Wedding-13Dec2026.ics",
-      waPrefix:
-        "॥ श्री गणेशाय नमः ॥ चि. रविराज व चि.सौ.कां. रूचिता यांचा शुभविवाह सोहळा (बुग्गे ❖ काकडे) · रविवार, १३ डिसेंबर २०२६, सायं. ५:४६ वा., विठ्ठल लॉन्स, हिंजवडी, पुणे. You are invited to the wedding of Raviraj & Ruchita, Sunday 13 December 2026, 5:46 PM, Vitthal Lawns, Hinjewadi, Pune. "
+      waMeta: {
+        blessing: "आमच्या येथे श्रीहरी कृपेने",
+        hostShort: "बुग्गे परिवार",
+        familiesOrder: "*बुग्गे परिवार* (कासार बालकुंदा) आणि *काकडे परिवार* (जेजुरी/पुणे)",
+        pairFamily: "बुग्गे ❖ काकडे",
+        coupleMr: "*चि. रविराज* ♥ *चि.सौ.कां. रूचिता*"
+      }
     },
     bride: {
       title: "Ruchita ♥ Raviraj · 13 December 2026",
@@ -1950,8 +1955,13 @@ body.opened #page {
       pairEn: "Ruchita & Raviraj",
       pairSymbol: "Ruchita ♥ Raviraj",
       icsFile: "Ruchita-Raviraj-Wedding-13Dec2026.ics",
-      waPrefix:
-        "॥ श्री गणेशाय नमः ॥ चि.सौ.कां. रूचिता व चि. रविराज यांचा शुभविवाह सोहळा (काकडे ❖ बुग्गे) · रविवार, १३ डिसेंबर २०२६, सायं. ५:४६ वा., विठ्ठल लॉन्स, हिंजवडी, पुणे. You are invited to the wedding of Ruchita & Raviraj, Sunday 13 December 2026, 5:46 PM, Vitthal Lawns, Hinjewadi, Pune. "
+      waMeta: {
+        blessing: "आमच्या येथे श्री कृपेकरून",
+        hostShort: "काकडे परिवार",
+        familiesOrder: "*काकडे परिवार* (जेजुरी/पुणे) आणि *बुग्गे परिवार* (कासार बालकुंदा)",
+        pairFamily: "काकडे ❖ बुग्गे",
+        coupleMr: "*चि.सौ.कां. रूचिता* ♥ *चि. रविराज*"
+      }
     }
   };
 
@@ -1997,10 +2007,40 @@ body.opened #page {
     });
   }
 
+  function buildWhatsAppMessage(cfg, shareUrl) {
+    const m = cfg.waMeta;
+    return [
+      "✨ *॥ श्री गणेशाय नमः ॥* ✨",
+      "🌸 *सस्नेह शुभविवाह निमंत्रण* 🌸",
+      "",
+      `*${cfg.hostMr}* यांच्या वतीने आपणास आनंदपूर्वक आमंत्रण! 🎉💐`,
+      "",
+      `${m.blessing}, ${m.familiesOrder} यांच्या शुभसंबंधातून सनई-चौघड्यांच्या मंगलमय सुरात आणि आनंदाच्या उधाणात बहरत आहे एक नवा प्रवास! 🎶🥁🌿`,
+      "",
+      `💛 *${m.pairFamily}* 💛`,
+      `💍 ${m.coupleMr} 💍`,
+      "",
+      "सप्तपदीच्या सात पावलांनी नवदाम्पत्याच्या नव्या आयुष्याची गोड सुरुवात होत आहे — आपली स्नेहपूर्ण साथ आणि शुभाशीर्वाद हाच आमच्यासाठी सर्वात मोठा आनंदोत्सव ठरेल! ✨❤️",
+      "",
+      "🗓️ *रविवार, १३ डिसेंबर २०२६*",
+      "🌼 *हळदी समारंभ:* सकाळी ९ वा. ३० मि.",
+      "🍽️ *स्नेहभोजन:* दु. १:०० ते ३:०० व सायं. ७:०० ते १०:०० वा.",
+      "🔥 *शुभविवाह मुहूर्त:* सायं. ५ वा. ४६ मि.",
+      "📍 *विवाहस्थळ:* विठ्ठल लॉन्स, हिंजवडी, पुणे",
+      "",
+      "मंगलक्षतांचा वर्षाव करण्यासाठी आपण सहकुटुंब-सहपरिवार अगत्य यावे, ही नम्र विनंती! 🤗🙏💐",
+      "",
+      `✨ With joy from *${cfg.hostEn}* — celebrate the wedding of *${cfg.pairEn}* on Sun, 13 Dec 2026 at 5:46 PM, Vitthal Lawns, Pune!`,
+      "",
+      `💌 *डिजिटल आमंत्रण पत्रिका (${m.hostShort}):*`,
+      shareUrl
+    ].join("\n");
+  }
+
   function updateShareLinks(cfg) {
     const waLink = document.getElementById("wa");
     if (waLink) {
-      waLink.href = "https://wa.me/?text=" + encodeURIComponent(cfg.waPrefix + getShareUrl());
+      waLink.href = "https://wa.me/?text=" + encodeURIComponent(buildWhatsAppMessage(cfg, getShareUrl()));
     }
     const calHaldi = document.getElementById("calHaldi");
     if (calHaldi) {
