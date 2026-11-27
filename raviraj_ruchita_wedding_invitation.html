@@ -761,6 +761,175 @@ body.live .hero .hero-card > h1 {
   box-shadow: 0 10px 26px rgba(38, 16, 22, 0.16);
 }
 
+/* Highlighted Important Dates & Times */
+.hero-dt {
+  width: fit-content;
+  max-width: 100%;
+  margin: 12px auto 4px;
+  padding: 9px 18px;
+  border-radius: 99px;
+  background: linear-gradient(135deg, rgba(255, 253, 249, 0.95), rgba(248, 235, 215, 0.93));
+  border: 1.5px solid rgba(194, 145, 82, 0.66);
+  box-shadow: 0 8px 22px rgba(84, 22, 37, 0.14);
+  color: #541625;
+  font-weight: 700;
+  font-size: 0.98rem;
+  line-height: 1.45;
+  text-shadow: none !important;
+}
+
+.hero-dt .dt-sep {
+  color: var(--gold-deep);
+  margin: 0 8px;
+  font-size: 0.86em;
+}
+
+.hero-dt .dt-time {
+  color: var(--wine);
+  font-weight: 700;
+}
+
+.dt-hi {
+  display: inline;
+  padding: 1px 8px;
+  margin: 0 1px;
+  border-radius: 7px;
+  background: linear-gradient(135deg, rgba(212, 166, 98, 0.28), rgba(139, 52, 72, 0.13));
+  border: 1px solid rgba(194, 145, 82, 0.54);
+  color: #541625;
+  font-weight: 700;
+  -webkit-box-decoration-break: clone;
+  box-decoration-break: clone;
+}
+
+/* Regal Spotlight Card for the Auspicious Muhurat Invitation */
+.muhurat-spotlight {
+  position: relative;
+  margin: 24px auto 4px;
+  padding: 28px 20px 24px;
+  border-radius: 24px;
+  background: linear-gradient(
+    168deg,
+    rgba(255, 253, 249, 0.98) 0%,
+    rgba(250, 239, 220, 0.96) 58%,
+    rgba(245, 228, 202, 0.95) 100%
+  );
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1.5px solid rgba(194, 145, 82, 0.78);
+  box-shadow:
+    0 20px 44px rgba(38, 16, 22, 0.24),
+    inset 0 0 0 5px rgba(255, 253, 249, 0.72),
+    inset 0 0 0 6.5px rgba(139, 52, 72, 0.24);
+  overflow: hidden;
+}
+
+.muhurat-spotlight::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 4px;
+  background: linear-gradient(90deg, var(--wine), var(--gold), var(--wine));
+}
+
+.muhurat-kicker {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  margin: 0 auto 16px;
+  padding: 6px 18px;
+  border-radius: 99px;
+  background: linear-gradient(135deg, #8b3448, #631d2e);
+  border: 1px solid rgba(235, 207, 162, 0.65);
+  color: #fffaf4;
+  font-size: 0.88rem;
+  font-weight: 700;
+  box-shadow: 0 6px 16px rgba(84, 22, 37, 0.22);
+}
+
+.muhurat-strip {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 10px;
+  margin: 0 0 18px;
+}
+
+.m-tile {
+  background: linear-gradient(180deg, #fffdf9, #fbf0df);
+  border: 1.5px solid rgba(194, 145, 82, 0.56);
+  border-radius: 14px;
+  padding: 11px 10px;
+  box-shadow: 0 5px 14px rgba(84, 22, 37, 0.08);
+}
+
+.m-lbl {
+  font-size: 0.78rem;
+  font-weight: 700;
+  color: var(--gold-deep);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  margin-bottom: 3px;
+}
+
+body[data-lang="mr"] .m-lbl {
+  letter-spacing: 0;
+  font-size: 0.82rem;
+}
+
+.m-val {
+  font-size: 1.06rem;
+  font-weight: 700;
+  color: #541625;
+  line-height: 1.35;
+}
+
+.m-sub {
+  font-size: 0.82rem;
+  font-weight: 600;
+  color: var(--wine);
+  margin-top: 2px;
+}
+
+.muhurat-msg {
+  margin: 0;
+  padding-top: 16px;
+  border-top: 1px dashed rgba(194, 145, 82, 0.62);
+  font-size: 1.06rem;
+  line-height: 1.92;
+  color: #36131c;
+  font-weight: 600;
+  text-shadow: none;
+}
+
+.card.card-muhurat {
+  background: linear-gradient(170deg, rgba(255, 253, 249, 0.97), rgba(248, 234, 212, 0.94)) !important;
+  border: 1.5px solid rgba(194, 145, 82, 0.68);
+  box-shadow:
+    0 16px 36px rgba(84, 22, 37, 0.14),
+    inset 0 0 0 5px rgba(255, 255, 255, 0.75),
+    inset 0 0 0 6px rgba(139, 52, 72, 0.22);
+}
+
+.ev-badge {
+  display: inline-block;
+  margin-bottom: 8px;
+  padding: 3px 12px;
+  border-radius: 99px;
+  background: linear-gradient(135deg, #8b3448, #682132);
+  color: #fffaf4;
+  font-size: 0.78rem;
+  font-weight: 700;
+}
+
+@media (max-width: 380px) {
+  .muhurat-strip {
+    grid-template-columns: 1fr;
+  }
+}
+
 .px.closing .pxin > .ganesh,
 .px.veil .pxin > .ganesh {
   color: var(--gold-soft);
@@ -1366,8 +1535,8 @@ body.opened #page {
         <div class="div"></div>
         <h3 class="mr">यांचा शुभविवाह</h3>
         <h3 class="en">Wedding Ceremony</h3>
-        <p class="mr">रविवार · १३ डिसेंबर २०२६ · सायं. ५ वा. ४६ मि.</p>
-        <p class="en">Sunday · 13 December 2026 · 5:46 PM</p>
+        <p class="hero-dt mr"><span class="dt-day">रविवार · १३ डिसेंबर २०२६</span><span class="dt-sep">✦</span><span class="dt-time">सायं. ५ वा. ४६ मि.</span></p>
+        <p class="hero-dt en"><span class="dt-day">Sunday · 13 December 2026</span><span class="dt-sep">✦</span><span class="dt-time">5:46 PM</span></p>
 
         <div class="btn-row">
           <button class="btn fill" id="saveDate" type="button">
@@ -1407,8 +1576,26 @@ body.opened #page {
         </div>
       </div>
       <div class="div"></div>
-      <p class="mr">मिती मार्गशीर्ष शु. ४ शके १९४८, दक्षिणायने हेमंत ऋतु, रविवार दि. १३/१२/२०२६ रोजी सायं. ५ वा. ४६ मि. या शुभमुहूर्तावर विवाह करण्याचे योजिले आहे. भावी संसाराचा शुभारंभ कुलदैवतेच्या दिव्य कृपेने, वेदमंत्राच्या पावित्र्याने, सप्तपदीने करणाऱ्या नवदाम्पत्यांस शुभाशीर्वाद द्यावेत ही नम्र विनंती.</p>
-      <p class="en">The wedding is planned on Margashirsha Shu. 4, Shake 1948, Sunday, 13 December 2026, at the auspicious muhurat of 5:46 PM. We humbly request you to bless the couple as they begin their married life with the grace of our family deities, the sanctity of Vedic mantras and the Saptapadi.</p>
+      <div class="muhurat-spotlight" aria-label="Wedding Muhurat and Invitation">
+        <div class="muhurat-kicker">
+          <span class="mr">✦ शुभमुहूर्त व सस्नेह निमंत्रण ✦</span>
+          <span class="en">✦ Auspicious Wedding Muhurat ✦</span>
+        </div>
+        <div class="muhurat-strip">
+          <div class="m-tile">
+            <div class="m-lbl"><span class="mr">शुभदिनांक</span><span class="en">Wedding Date</span></div>
+            <div class="m-val"><span class="mr">रविवार, १३/१२/२०२६</span><span class="en">Sun, 13 Dec 2026</span></div>
+            <div class="m-sub"><span class="mr">मार्गशीर्ष शु. ४ · शके १९४८</span><span class="en">Margashirsha Shu. 4 · Shake 1948</span></div>
+          </div>
+          <div class="m-tile">
+            <div class="m-lbl"><span class="mr">शुभमुहूर्त</span><span class="en">Muhurat Time</span></div>
+            <div class="m-val"><span class="mr">सायं. ५ वा. ४६ मि.</span><span class="en">5:46 PM</span></div>
+            <div class="m-sub"><span class="mr">गोधूलि शुभविवाह मुहूर्त</span><span class="en">Auspicious Muhurat</span></div>
+          </div>
+        </div>
+        <p class="muhurat-msg mr"><span class="dt-hi">मिती मार्गशीर्ष शु. ४ शके १९४८</span>, दक्षिणायने हेमंत ऋतु, <span class="dt-hi">रविवार दि. १३/१२/२०२६</span> रोजी <span class="dt-hi">सायं. ५ वा. ४६ मि.</span> या शुभमुहूर्तावर विवाह करण्याचे योजिले आहे. भावी संसाराचा शुभारंभ कुलदैवतेच्या दिव्य कृपेने, वेदमंत्राच्या पावित्र्याने, सप्तपदीने करणाऱ्या नवदाम्पत्यांस शुभाशीर्वाद द्यावेत ही नम्र विनंती.</p>
+        <p class="muhurat-msg en">The wedding is planned on <span class="dt-hi">Margashirsha Shu. 4, Shake 1948</span>, <span class="dt-hi">Sunday, 13 December 2026</span>, at the auspicious muhurat of <span class="dt-hi">5:46 PM</span>. We humbly request you to bless the couple as they begin their married life with the grace of our family deities, the sanctity of Vedic mantras and the Saptapadi.</p>
+      </div>
     </div>
   </section>
 
@@ -1429,8 +1616,8 @@ body.opened #page {
         <div class="card">
           <div class="t mr">हळदी समारंभ</div>
           <div class="t en">Haldi</div>
-          <p class="mr">रविवार, १३ डिसेंबर २०२६<br>सकाळी ९ वा. ३० मि.<br><span class="mute">(विवाहस्थळी)</span></p>
-          <p class="en">Sunday, 13 December 2026<br>9:30 AM<br><span class="mute">(at the venue)</span></p>
+          <p class="mr"><span class="dt-hi">रविवार, १३ डिसेंबर २०२६</span><br><span class="dt-hi" style="display:inline-block;margin-top:6px">सकाळी ९ वा. ३० मि.</span><br><span class="mute">(विवाहस्थळी)</span></p>
+          <p class="en"><span class="dt-hi">Sunday, 13 December 2026</span><br><span class="dt-hi" style="display:inline-block;margin-top:6px">9:30 AM</span><br><span class="mute">(at the venue)</span></p>
           <div class="btn-row">
             <a class="btn" id="calHaldi" target="_blank" rel="noopener" href="https://calendar.google.com/calendar/render?action=TEMPLATE&amp;text=Haldi%20-%20Raviraj%20%26%20Ruchita&amp;dates=20261213T040000Z/20261213T060000Z&amp;location=Vitthal%20Lawns%2C%20Hinjewadi%2C%20Pune">
               <span class="mr">कॅलेंडरमध्ये जोडा</span>
@@ -1442,15 +1629,16 @@ body.opened #page {
         <div class="card">
           <div class="t mr">स्नेहभोजन</div>
           <div class="t en">Snehbhojan (Lunch &amp; Dinner)</div>
-          <p class="mr">दुपारी १.०० ते ३.०० वा.<br>सायं. ७.०० ते १०.०० वा.<br><span class="mute">(विवाहस्थळी)</span></p>
-          <p class="en">1:00 PM to 3:00 PM<br>7:00 PM to 10:00 PM<br><span class="mute">(at the venue)</span></p>
+          <p class="mr"><span class="dt-hi">रविवार, १३ डिसेंबर २०२६</span><br><span class="dt-hi" style="display:inline-block;margin-top:6px">दुपारी १.०० ते ३.०० वा.</span><br><span class="dt-hi" style="display:inline-block;margin-top:6px">सायं. ७.०० ते १०.०० वा.</span><br><span class="mute">(विवाहस्थळी)</span></p>
+          <p class="en"><span class="dt-hi">Sunday, 13 December 2026</span><br><span class="dt-hi" style="display:inline-block;margin-top:6px">1:00 PM to 3:00 PM</span><br><span class="dt-hi" style="display:inline-block;margin-top:6px">7:00 PM to 10:00 PM</span><br><span class="mute">(at the venue)</span></p>
         </div>
 
-        <div class="card">
+        <div class="card card-muhurat">
+          <div class="ev-badge"><span class="mr">✦ मुख्य मुहूर्त ✦</span><span class="en">✦ Main Ceremony ✦</span></div>
           <div class="t mr">शुभविवाह</div>
           <div class="t en">Wedding</div>
-          <p class="mr">रविवार, १३ डिसेंबर २०२६<br>मुहूर्त : सायं. ५ वा. ४६ मि.<br><span class="mute">विठ्ठल लॉन्स, हिंजवडी, पुणे</span></p>
-          <p class="en">Sunday, 13 December 2026<br>Muhurat: 5:46 PM<br><span class="mute">Vitthal Lawns, Hinjewadi, Pune</span></p>
+          <p class="mr"><span class="dt-hi">रविवार, १३ डिसेंबर २०२६</span><br><span class="dt-hi" style="display:inline-block;margin-top:6px">मुहूर्त : सायं. ५ वा. ४६ मि.</span><br><span class="mute">विठ्ठल लॉन्स, हिंजवडी, पुणे</span></p>
+          <p class="en"><span class="dt-hi">Sunday, 13 December 2026</span><br><span class="dt-hi" style="display:inline-block;margin-top:6px">Muhurat: 5:46 PM</span><br><span class="mute">Vitthal Lawns, Hinjewadi, Pune</span></p>
           <div class="btn-row">
             <a class="btn" id="calWedding" target="_blank" rel="noopener" href="https://calendar.google.com/calendar/render?action=TEMPLATE&amp;text=Wedding%20-%20Raviraj%20%26%20Ruchita&amp;dates=20261213T121600Z/20261213T141600Z&amp;location=Vitthal%20Lawns%2C%20Hinjewadi%2C%20Pune">
               <span class="mr">कॅलेंडरमध्ये जोडा</span>
@@ -2105,7 +2293,7 @@ body.opened #page {
 
   document
     .querySelectorAll(
-      "section:not(.hero) h2, section:not(.hero) .card, section:not(.hero) .div, .cd, .ph, section:not(.hero) .btn-row, section:not(.hero) > p, .px:not(.hero) .pxin > p, ul.l li"
+      "section:not(.hero) h2, section:not(.hero) .card, section:not(.hero) .muhurat-spotlight, section:not(.hero) .div, .cd, .ph, section:not(.hero) .btn-row, section:not(.hero) > p, .px:not(.hero) .pxin > p, ul.l li"
     )
     .forEach((el) => {
       el.classList.add("rv");
